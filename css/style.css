@@ -1,0 +1,214 @@
+/* line 1, ../sass/_base.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Slabo 27px', serif;
+}
+/* line 6, ../sass/_base.scss */
+body h1, body h2, body h3, body p {
+  margin: 0;
+}
+/* line 10, ../sass/_base.scss */
+body header, body footer {
+  color: #eceff1;
+  background-color: #263238;
+  line-height: 5vh;
+  text-align: center;
+}
+/* line 17, ../sass/_base.scss */
+body header {
+  height: 10vh;
+  color: #ffab00;
+}
+/* line 22, ../sass/_base.scss */
+body section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 15vh);
+  background-color: #424242;
+  color: #fafafa;
+}
+/* line 31, ../sass/_base.scss */
+body footer {
+  height: 5vh;
+}
+/* line 35, ../sass/_base.scss */
+body [class*="player"] h3 {
+  position: relative;
+  width: 400px;
+  height: 30px;
+  margin: 10px auto;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #111;
+  border-bottom: 1px solid #9e9e9e;
+}
+/* line 47, ../sass/_base.scss */
+body .player1 h3 {
+  color: #d50000;
+}
+/* line 48, ../sass/_base.scss */
+body .player2 h3 {
+  color: #1976d2;
+}
+/* line 50, ../sass/_base.scss */
+body .updown {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #fafafa;
+  color: #111;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 38px;
+  border-bottom: 2px solid #111;
+}
+/* line 64, ../sass/_base.scss */
+body #LP1Down, body #LP2Down {
+  top: -5px;
+  left: -20px;
+}
+/* line 68, ../sass/_base.scss */
+body #LP1Up, body #LP2Up {
+  top: -5px;
+  right: -20px;
+}
+/* line 73, ../sass/_base.scss */
+body .cards {
+  display: flex;
+  justify-content: center;
+}
+/* line 77, ../sass/_base.scss */
+body .cards [class*="card-"] {
+  margin: 5px;
+  width: 220px;
+  height: 320px;
+  outline: 1px solid #9e9e9e;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+/* line 86, ../sass/_base.scss */
+body .modal {
+  position: fixed;
+  top: -112px;
+  left: 50%;
+  margin-left: -200px;
+  padding: 5px;
+  width: 400px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fafafa;
+  box-shadow: 0 3px 3px #333;
+  transition: .4s;
+}
+/* line 99, ../sass/_base.scss */
+body .modal p {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fafafa;
+  color: #fafafa;
+}
+
+/* line 1, ../sass/_card.scss */
+.monster {
+  position: relative;
+}
+/* line 4, ../sass/_card.scss */
+.monster .head {
+  display: flex;
+  height: 40px;
+}
+/* line 8, ../sass/_card.scss */
+.monster .head .name {
+  width: calc(100% - 90px);
+  background-color: #111;
+  color: #ccc;
+  line-height: 40px;
+  padding-left: 10px;
+}
+/* line 16, ../sass/_card.scss */
+.monster .head .lvl, .monster .head .energy {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  background-color: #fafafa;
+  color: #111;
+  line-height: 40px;
+  text-align: center;
+  font-size: 2em;
+}
+/* line 28, ../sass/_card.scss */
+.monster [class*="img-"] {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 180px;
+  height: 160px;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 39, ../sass/_card.scss */
+.monster .img-pyromancien {
+  background-image: url("../img/pyromancien.jpg");
+}
+/* line 40, ../sass/_card.scss */
+.monster .img-barbare {
+  background-image: url("../img/barbare.jpg");
+}
+/* line 42, ../sass/_card.scss */
+.monster .stat {
+  border: 1px solid #111;
+  border-bottom: 0;
+  width: 38px;
+  height: 39px;
+}
+/* line 48, ../sass/_card.scss */
+.monster .stat p {
+  height: 20px;
+  line-height: 20px;
+  font-size: .7em;
+  text-align: center;
+  font-weight: 700;
+}
+/* line 55, ../sass/_card.scss */
+.monster .stat p:first-child {
+  background-color: #222;
+}
+/* line 59, ../sass/_card.scss */
+.monster .stat p:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+/* line 66, ../sass/_card.scss */
+.monster .type {
+  height: 20px;
+  line-height: 20px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  background-color: #222;
+  color: #ccc;
+  font-size: .8em;
+  font-weight: 700;
+  padding-left: 5px;
+}
+/* line 78, ../sass/_card.scss */
+.monster .description {
+  height: 86px;
+  padding: 5px;
+  color: #333;
+  background-color: #ccc;
+  border: 1px solid #333;
+}
+/* line 85, ../sass/_card.scss */
+.monster .description .skill-type, .monster .description .skill {
+  width: 90%;
+  margin: 2px auto;
+  padding-bottom: 5px;
+  font-style: .8em;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}

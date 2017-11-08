@@ -1,0 +1,95 @@
+.monster {
+  position: relative;
+
+  .head {
+    display: flex;
+    height: 40px;
+
+    .name {
+      width: calc(100% - 90px);
+      background-color: #111;
+      color: #ccc;
+      line-height: 40px;
+      padding-left: 10px;
+    }
+
+    .lvl, .energy {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      background-color: #fafafa;
+      color: #111;
+      line-height: 40px;
+      text-align: center;
+      font-size: 2em;
+    }
+  }
+
+  [class*="img-"] {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 180px;
+    height: 160px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .img-pyromancien { background-image: url('../img/pyromancien.jpg') }
+  .img-barbare { background-image: url('../img/barbare.jpg') }
+
+  .stat {
+    border: 1px solid #111;
+    border-bottom: 0;
+    width: 38px;
+    height: 39px;
+
+    p {
+      height: 20px;
+      line-height: 20px;
+      font-size: .7em;
+      text-align: center;
+      font-weight: 700;
+
+      &:first-child {
+        background-color: #222;
+      }
+
+      &:last-child {
+        background-color: #ccc;
+        color: #333;
+      }
+    }
+  }
+
+  .type {
+    height: 20px;
+    line-height: 20px;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    background-color: #222;
+    color: #ccc;
+    font-size: .8em;
+    font-weight: 700;
+    padding-left: 5px;
+  }
+
+  .description {
+    height: 86px;
+    padding: 5px;
+    color: #333;
+    background-color: #ccc;
+    border: 1px solid #333;
+
+    .skill-type, .skill {
+      width: 90%;
+      margin: 2px auto;
+      padding-bottom: 5px;
+      font-style: .8em;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+  }
+
+}
