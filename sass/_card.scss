@@ -1,7 +1,9 @@
 .monster {
   position: relative;
+  cursor: default;
 
   .head {
+    position: relative;
     display: flex;
     height: 40px;
 
@@ -21,7 +23,26 @@
       color: #111;
       line-height: 40px;
       text-align: center;
-      font-size: 2em;
+    }
+
+    .lvl {
+      font-size: 1.7em;
+    }
+
+    .energy {
+      position: relative;
+      input {
+        position: absolute;
+        left: 7px;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        font-size: 1.4em;
+        text-align: center;
+        background-color: transparent;
+      }
     }
   }
 
@@ -34,10 +55,29 @@
     background-color: #000;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
   }
 
-  .img-pyromancien { background-image: url('../img/pyromancien.jpg') }
   .img-barbare { background-image: url('../img/barbare.jpg') }
+  .img-barbareF { background-image: url('../img/barbareF.jpg') }
+  .img-dwarf { background-image: url('../img/dwarf.jpg') }
+  .img-gobelin { background-image: url('../img/gobelin.jpg') }
+  .img-jumeaux { background-image: url('../img/jumeaux.jpg') }
+  .img-loup-garou { background-image: url('../img/loup-garou.jpg') }
+  .img-ogre { background-image: url('../img/ogre.jpg') }
+  .img-zombie { background-image: url('../img/zombie.jpg') }
+  .img-pyromancien { background-image: url('../img/pyromancien.jpg') }
+  .img-sorcier-foudre { background-image: url('../img/sorcier-foudre.jpg') }
+  .img-magelame { background-image: url('../img/magelame.jpg') }
+  .img-magicien { background-image: url('../img/magicien.jpg') }
+  .img-sorciere { background-image: url('../img/sorciere.jpg') }
+  .img-spider { background-image: url('../img/spider.jpg') }
+  .img-necromante { background-image: url('../img/necromante.jpg') }
+  .img-dragon { background-image: url('../img/dragon.jpg') }
+  .img-liche { background-image: url('../img/liche.jpg') }
+  .img-sucube { background-image: url('../img/sucube.jpg') }
+  .img-nymphe { background-image: url('../img/nymphe.jpg') }
+  .img-demon { background-image: url('../img/demon.jpg') }
 
   .stat {
     border: 1px solid #111;
@@ -76,6 +116,7 @@
   }
 
   .description {
+    position: relative;
     height: 86px;
     padding: 5px;
     color: #333;
@@ -86,9 +127,48 @@
       width: 90%;
       margin: 2px auto;
       padding-bottom: 5px;
-      font-style: .8em;
+      font-style: .6em;
       text-align: center;
       border-bottom: 1px solid #333;
+    }
+
+    .skill-type {
+      display: flex;
+      justify-content: center;
+      div {
+        width: 25px;
+        height: 25px;
+        margin: 0 1px;
+        background-size: cover;
+        border-radius: 100%;
+
+        &.magie { background-image: url(../img/dice/mag-dice.jpg); }
+        &.rituel { background-image: url(../img/dice/rit-dice.jpg); }
+        &.combat { background-image: url(../img/dice/cbt-dice.jpg); }
+        &.piege { background-image: url(../img/dice/pie-dice.jpg); }
+      }
+    }
+
+    .delete {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      margin-left: -15px;
+      width: 30px;
+      height: 30px;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid #eee;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      left: 1px;
+      bottom: 1px;
     }
   }
 

@@ -20,16 +20,31 @@ body {
   }
 
   section {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - 15vh);
+    height: calc(100vh - 12vh);
     background-color: #424242;
     color: #fafafa;
+
+    #desactivate {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #eee;
+      border: 0;
+      outline: 0;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
   }
 
   footer {
-    height: 5vh;
+    height: 2vh;
+    line-height: 2vh;
+    font-size: .7em;
   }
 
   [class*="player"] h3 {
@@ -75,32 +90,98 @@ body {
     justify-content: center;
 
     [class*="card-"] {
+      position: relative;
       margin: 5px;
       width: 220px;
       height: 320px;
       outline: 1px solid #9e9e9e;
       background-color: rgba(0, 0, 0, .25);
+
+      .add {
+        position: absolute;
+        top: 50%;
+        margin-top: -40px;
+        left: 50%;
+        margin-left: -40px;
+        width: 80px;
+        height: 80px;
+        border: 2px solid #eee;
+        color: #eee;
+        font-size: 3em;
+        text-align: center;
+        line-height: 80px;
+        border-radius: 100%;
+        background-color: rgba(255, 255, 255, .1);
+        cursor: pointer;
+      }
     }
   }
 
   .modal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: fixed;
-    top: -112px;
+    flex-wrap: wrap;
+    top: -230px;
     left: 50%;
-    margin-left: -200px;
-    padding: 5px;
-    width: 400px;
-    height: 100px;
+    margin-left: -400px;
+    width: 900px;
+    padding: 15px;
+    height: 188px;
     background-color: rgba(0, 0, 0, .5);
     border: 1px solid #fafafa;
     box-shadow: 0 3px 3px #333;
     transition: .4s;
 
-    p {
-      padding: 5px;
-      background-color: rgba(0, 0, 0, .5);
-      border: 1px solid #fafafa;
-      color: #fafafa;
+    div {
+      position: relative;
+      width: 80px;
+      min-width: 80px;
+      height: 80px;
+      border: 2px solid #eee;
+      border-radius: 100%;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      transition: .4s;
+
+      &:hover {
+        filter: brightness(150%);
+      }
+
+      &#barbare { background-image: url(../img/barbare.jpg) }
+      &#barbareF { background-image: url(../img/barbareF.jpg) }
+      &#dwarf { background-image: url(../img/dwarf.jpg) }
+      &#gobelin { background-image: url(../img/gobelin.jpg) }
+      &#jumeaux { background-image: url(../img/jumeaux.jpg) }
+      &#loup-garou { background-image: url(../img/loup-garou.jpg) }
+      &#ogre { background-image: url(../img/ogre.jpg) }
+      &#zombie { background-image: url(../img/zombie.jpg) }
+      &#pyromancien { background-image: url(../img/pyromancien.jpg) }
+      &#sorcier-foudre { background-image: url(../img/sorcier-foudre.jpg) }
+      &#magelame { background-image: url(../img/magelame.jpg) }
+      &#magicien { background-image: url(../img/magicien.jpg) }
+      &#sorciere { background-image: url(../img/sorciere.jpg) }
+      &#spider { background-image: url(../img/spider.jpg) }
+      &#necromante { background-image: url(../img/necromante.jpg) }
+      &#dragon { background-image: url(../img/dragon.jpg) }
+      &#liche { background-image: url(../img/liche.jpg) }
+      &#sucube { background-image: url(../img/sucube.jpg) }
+      &#nymphe { background-image: url(../img/nymphe.jpg) }
+      &#demon { background-image: url(../img/demon.jpg) }
+
+      .m-lvl {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #eee;
+        color: #111;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 100%;
+        font-weight: 700;
+      }
     }
   }
 }
